@@ -229,7 +229,7 @@ export default function Projects() {
                     <div className="project--showcaseBtn">
                       <a
                         href={
-                          "https://github.com/KhanSharif786/Personal-Portfolio"
+                          ""
                         }
                         target="_blank"
                         rel="noreferrer"
