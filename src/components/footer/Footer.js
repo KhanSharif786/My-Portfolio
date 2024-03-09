@@ -1,0 +1,77 @@
+import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import { AiFillGithub, AiFillInstagram } from "react-icons/ai";
+import { FaLinkedinIn, FaFacebookF, FaGoogle } from "react-icons/fa";
+
+function Footer() {
+  let date = new Date();
+  let year = date.getFullYear();
+  return (
+    <Container fluid className="footer">
+      <Row>
+        <Col md="4" className="footer-copywright">
+          <h3>Designed and Developed by Khan Mohammad Sharif</h3>
+        </Col>
+        <Col md="4" className="footer-copywright">
+          <h3>Copyright © {year} Khan Mohammad Sharif</h3>
+        </Col>
+        <Col md="4" className="footer-body">
+          <ul className="footer-icons">
+            <li className="social-icons">
+              <a
+                href="https://github.com/khanSharif786"
+                style={{ color: "white" }}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <AiFillGithub />
+              </a>
+            </li>
+            <li className="social-icons">
+              <a
+                href="https://www.linkedin.com/in/sharif-khan-3a0166260/"
+                style={{ color: "white" }}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedinIn />
+              </a>
+            </li>
+            <li className="social-icons">
+              <a
+                href="https://www.instagram.com/khansharif5/"
+                style={{ color: "white" }}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <AiFillInstagram />
+              </a>
+            </li>
+            <li className="social-icons">
+              <a
+                href="https://www.facebook.com/profile.php?id=100030757328098&mibextid=2JQ9oc"
+                style={{ color: "white" }}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaFacebookF />
+              </a>
+            </li>
+            <li className="social-icons">
+              <a
+                href="mailto:001.ksharif@gmail.com/"
+                style={{ color: "white" }}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGoogle />
+              </a>
+            </li>
+          </ul>
+        </Col>
+      </Row>
+    </Container>
+  );
+}
+
+export default Footer;
