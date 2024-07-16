@@ -3,12 +3,15 @@ import { Container, Row, Col } from "react-bootstrap";
 import Zoom from "react-reveal/Zoom";
 import { Fade } from "react-reveal";
 import nyc from "../../images/nyc.png";
-import hd from "../../images/hd.png";
+import da from "../../images/da.jpeg"
+import mc from "../../images/mc.jpeg";
+import mmnf from "../../images/mmnf.jpeg"
 import pp from "../../images/portfolio.jpeg";
 import { FaCode } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { HiArrowRight } from "react-icons/hi";
 import dc from "../../images/dc.png";
+
 
 export default function Projects() {
   return (
@@ -36,13 +39,13 @@ export default function Projects() {
                 >
                   <div className="projectContent">
                     <h5 id={"first"} style={{ color: "#fbd9ad" }}>
-                      New Year CountDown
+                      DermAssist
                     </h5>
-                    <img src={nyc} alt={nyc} />
+                    <img src={da} alt={da} />
                     <div className="project--showcaseBtn">
                       <a
                         href={
-                          "https://github.com/KhanSharif786/New-Year-Countdown"
+                          "https://github.com/KhanSharif786/DermAssist"
                         }
                         target="_blank"
                         rel="noreferrer"
@@ -66,12 +69,12 @@ export default function Projects() {
                         fontWeight: 600,
                       }}
                     >
-                      The New Year Countdown Project is more than just a
-                      celebration; it's a testament to the human spirit and our
-                      shared aspirations for a brighter future. So, mark your
-                      calendars and get ready to be part of this global
-                      extravaganza as we count down to a new year filled with
-                      endless possibilities.
+                      "DermAssist is an innovative web application designed for the early detection, 
+                      education, and management of skin conditions.DermAssist leverages advanced image 
+                      recognition and machine learning technologies to analyze images of skin lesions 
+                      uploaded by users."
+                       
+                      
                     </p>
                   </h6>
                   <div
@@ -82,7 +85,70 @@ export default function Projects() {
                       fontWeight: 600,
                     }}
                   >
-                    HTML, CSS, JavaScript
+                    Reactjs, Python, Flask
+                  </div>
+                </div>
+              </Fade>
+            </Col>
+        
+            <Col md={3}>
+              <Fade bottom>
+                <div
+                  key={1}
+                  className="singleProject"
+                  style={{
+                    backgroundColor: "rgb(142 70 186 / 31%)",
+                    border: "1px solid",
+                  }}
+                >
+                  <div className="projectContent">
+                    <h5 id={"first"} style={{ color: "#fbd9ad" }}>
+                      MealConnect
+                    </h5>
+                    <img src={mc} alt={mc} />
+                    <div className="project--showcaseBtn">
+                      <a
+                        href={
+                          "https://github.com/KhanSharif786/MealConnect"
+                        }
+                        target="_blank"
+                        rel="noreferrer"
+                        className={"iconBtn"}
+                        aria-labelledby={`code`}
+                      >
+                        <FaCode
+                          id={`code`}
+                          className={"icon"}
+                          aria-label="Code"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                  <h6>
+                    <p
+                      className="project--desc"
+                      style={{
+                        background: "#fbd9ad",
+                        color: "#b061df",
+                        fontWeight: 600,
+                      }}
+                    >
+                     "Designed MealConnect, leveraging FLUTTER for user-friendly 
+                      interfaces, PHP for backend functionality, and HTML, CSS,
+                      JavaScript for seamless web design. Efficiently connects food
+                      donors with receivers, addressing food insecurity."
+
+                    </p>
+                  </h6>
+                  <div
+                    className="project--lang"
+                    style={{
+                      background: "#fbd9ad",
+                      color: "#b061df",
+                      fontWeight: 600,
+                    }}
+                  >
+                    Flutter, PHP, HTML,CSS,Javascript
                   </div>
                 </div>
               </Fade>
@@ -99,13 +165,13 @@ export default function Projects() {
                 >
                   <div className="projectContent">
                     <h5 id={"first"} style={{ color: "#fbd9ad" }}>
-                      Heart Disease Prediction
+                    MMNF
                     </h5>
-                    <img src={hd} alt={hd} />
+                    <img src={mmnf} alt={mmnf} />
                     <div className="project--showcaseBtn">
                       <a
                         href={
-                          "https://github.com/KhanSharif786/Heart-Disease-Prediction"
+                          "https://github.com/KhanSharif786/MMNF"
                         }
                         target="_blank"
                         rel="noreferrer"
@@ -129,11 +195,11 @@ export default function Projects() {
                         fontWeight: 600,
                       }}
                     >
-                      Use of AI and Machine Learning: Artificial intelligence
-                      and machine learning are already being used in healthcare
-                      to help predict heart disease. In the future, these
-                      technologies could become more advanced, enabling more
-                      accurate predictions of heart disease risk.
+                      "Developed a product listing and sales platform for MMNF using HTML, CSS, 
+                       JavaScript and PHP. 
+                      Features include product search, inventory management, sales tracking, 
+                      and customer feedback, tailored for Maharashtra Minority NGO Forum vendors."
+
                     </p>
                   </h6>
                   <div
@@ -144,68 +210,7 @@ export default function Projects() {
                       fontWeight: 600,
                     }}
                   >
-                    Pandas, Matplotlib, Scikit-Learn
-                  </div>
-                </div>
-              </Fade>
-            </Col>
-            <Col md={3}>
-              <Fade bottom>
-                <div
-                  key={1}
-                  className="singleProject"
-                  style={{
-                    backgroundColor: "rgb(142 70 186 / 31%)",
-                    border: "1px solid",
-                  }}
-                >
-                  <div className="projectContent">
-                    <h5 id={"first"} style={{ color: "#fbd9ad" }}>
-                    Digital Clock
-                    </h5>
-                    <img src={dc} alt={dc} />
-                    <div className="project--showcaseBtn">
-                      <a
-                        href={
-                          "https://github.com/KhanSharif786/Digital-Clock"
-                        }
-                        target="_blank"
-                        rel="noreferrer"
-                        className={"iconBtn"}
-                        aria-labelledby={`code`}
-                      >
-                        <FaCode
-                          id={`code`}
-                          className={"icon"}
-                          aria-label="Code"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                  <h6>
-                    <p
-                      className="project--desc"
-                      style={{
-                        background: "#fbd9ad",
-                        color: "#b061df",
-                        fontWeight: 600,
-                      }}
-                    >
-                      Create a sleek, responsive digital clock with HTML, CSS, and JavaScript. 
-                      Display real-time hours, minutes, and seconds, and update automatically. 
-                      Customize its style and layout using CSS for a modern, functional 
-                      timekeeping experience.
-                    </p>
-                  </h6>
-                  <div
-                    className="project--lang"
-                    style={{
-                      background: "#fbd9ad",
-                      color: "#b061df",
-                      fontWeight: 600,
-                    }}
-                  >
-                    HTML, CSS, JavaScript
+                    HTML, CSS, JavaScript, PHP 
                   </div>
                 </div>
               </Fade>
@@ -229,7 +234,7 @@ export default function Projects() {
                     <div className="project--showcaseBtn">
                       <a
                         href={
-                          ""
+                          "https://github.com/KhanSharif786/Personal-Portfolio"
                         }
                         target="_blank"
                         rel="noreferrer"
