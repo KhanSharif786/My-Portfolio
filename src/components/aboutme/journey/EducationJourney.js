@@ -82,7 +82,7 @@ function EducationJourney() {
           </h4>
           <p>
             Studied Bachelor of Science degree in Computer Science and
-            Engineering field from Anjuman-I-Islam's Kalsekar Technical Campus and gain CGPA 8.5.
+            Engineering field from Anjuman-I-Islam's Kalsekar Technical Campus and gain CGPA 8.62.
           </p>
         </VerticalTimelineElement>
 

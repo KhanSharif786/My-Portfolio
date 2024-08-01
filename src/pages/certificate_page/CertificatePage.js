@@ -1,4 +1,5 @@
-import React from "react";
+// import React from "react";
+import React, { useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Zoom from "react-reveal/Zoom";
 import { Fade } from "react-reveal";
@@ -17,6 +18,10 @@ import sql from "../../images/SQL.png"
 import python from "../../images/Python.png"
 import Particle from "../../Particle";
 export default function CertificatePage() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <section className="home-section">
       <Container fluid id="home">

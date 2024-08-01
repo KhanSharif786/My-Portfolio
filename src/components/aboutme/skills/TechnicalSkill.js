@@ -255,7 +255,7 @@ export default function TechnicalSkill() {
                 </h2>
               </div>
             </Col>
-            <Col md={4}>
+            {/* <Col md={4}>
               <h1
                 style={{ fontSize: "100px", color: "#54faae", fontWeight: 700 }}
               >
@@ -283,7 +283,7 @@ export default function TechnicalSkill() {
                   JAVA
                 </h2>
               </div>
-            </Col>
+            </Col> */}
           </Row>
         </Container>
       </div>

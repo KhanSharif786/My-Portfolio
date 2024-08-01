@@ -233,9 +233,7 @@ export default function Projects() {
                     <img src={pp} alt={pp} />
                     <div className="project--showcaseBtn">
                       <a
-                        href={
-                          "https://github.com/KhanSharif786/Personal-Portfolio"
-                        }
+                       
                         target="_blank"
                         rel="noreferrer"
                         className={"iconBtn"}

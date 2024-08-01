@@ -29,33 +29,22 @@ const About = () => {
             <Fade duration={3000}>
               <p className="home-about-body">
                 My name is <b className="purple">Khan Mohammad Sharif </b> 
-                  and I am a <b className="purple">Computer Science and Engineering </b> 
-                    student at <b className="purple">Anjuman-I-Islam's Kalsekar Technical Campus </b>
-                      in Panvel, India.
+                  , a <b className="purple">Computer Engineering </b> 
+                  graduate with a passion for <b className="purple">Software Development, 
+                    Artificial Intelligence, Machine Learning, and Data Science. </b>
+                      
                 <br />
                 <br />
-                        I am proficient in various programming languages such as &nbsp;
-                  <b className="purple">
-                    {" "}
-                    C, C++, Java, Python, HTML, CSS, PHP, JavaScript, and Flutter.{" "}
-                  </b>
-                <br />
-                <br />
-                I also have experience working with frameworks and libraries such as &nbsp;
 
-                  <b className="purple">
-                    {" "}
-                    NodeJS, ReactJS, OpenCV, Pandas, and NumPy.{" "}
-                  </b>
+                As a software engineer, I specialize in <b className="purple">crafting innovative 
+                solutions</b> that elevate user experiences and address real-world challenges. 
+                With a solid foundation in software development and a deep passion for technology, 
+                I am dedicated to <b className="purple">building applications</b> that not only 
+                meet <b className="purple">user needs </b> but also make a 
+                <b className="purple">positive impact on society.</b>
+
                 <br />
-                <br />
-                Whenever possible, I also apply my passion for developing
-                products with &nbsp;
-                  <b className="purple">
-                    {" "}
-                    Modern Javascript Library and Frameworks.
-                  </b>
-                <br />
+
                 <br />In my free time, I enjoy learning new technologies and &nbsp;
                   <b className="purple">building new web technologies and products. </b>
               </p>

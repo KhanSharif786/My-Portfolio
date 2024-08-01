@@ -1,4 +1,5 @@
-import React from "react";
+// import React from "react";
+import React, { useEffect } from "react";
 import Particle from "../../Particle";
 import { Container, Row, Col } from "react-bootstrap";
 import Zoom from "react-reveal/Zoom";
@@ -15,6 +16,9 @@ import calendar from "../../images/calendar.png";
 import dc from "../../images/dc.png";
 import { FaCode } from "react-icons/fa";
 export default function ProjectPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <section className="home-section">
       <Container fluid id="home">
@@ -367,9 +371,7 @@ export default function ProjectPage() {
                                 <img src={pp} alt={pp} />
                                 <div className="project--showcaseBtn">
                                   <a
-                                    href={
-                                      "https://github.com/KhanSharif786/Personal-Portfolio"
-                                    }
+                                    
                                     target="_blank"
                                     rel="noreferrer"
                                     className={"iconBtn"}

@@ -1,42 +1,57 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Zoom from "react-reveal/Zoom";
-import axios from "axios";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { AiOutlineSend } from "react-icons/ai";
 import { FiPhone, FiAtSign } from "react-icons/fi";
 import { HiOutlineLocationMarker } from "react-icons/hi";
+import emailjs from '@emailjs/browser';
 
 export default function Contactus() {
-  const [formData, setFormData] = useState(new FormData());
+  const form = useRef();
+  const [formDetails, setFormDetails] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    message: ''
+  });
+  const [buttonText, setButtonText] = useState('Send');
+  const [status, setStatus] = useState({ success: false, message: '' });
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  const onFormUpdate = (field, value) => {
+    setFormDetails({
+      ...formDetails,
+      [field]: value
+    });
   };
 
-  const handleSubmit = async (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
+    setButtonText('Sending...');
 
-    if (!(formData.name && formData.email && formData.message)) {
-      alert("Something went wrong!");
-      return;
-    }
-
-    try {
-      const response = await axios.post(
-        "http://localhost:5000/api/submitForm",
-        formData
+    emailjs
+      .sendForm('service_9z9h3nn', 'template_ek0x6bg', form.current, 'FAd_0uswrNfxLX97B')
+      .then(
+        (result) => {
+          console.log('SUCCESS!', result.text);
+          setButtonText('Send');
+          setStatus({ success: true, message: 'Message sent successfully!' });
+          alert('Message sent successfully!');
+          setFormDetails({
+            firstName: '',
+            lastName: '',
+            email: '',
+            phone: '',
+            message: ''
+          });
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+          setButtonText('Send');
+          setStatus({ success: false, message: 'Failed to send the message. Please try again later.' });
+        }
       );
-      console.log(response.data.message); // Log the response from the backend
-
-      alert(`Thanks ${formData.name}, I will shortly connect with you!`);
-    } catch (error) {
-      console.error("Error submitting the form:", error);
-
-      alert("Backend Server was not Running while submitting the form.");
-    }
-
-    setFormData({});
   };
 
   return (
@@ -56,7 +71,7 @@ export default function Contactus() {
               <Row>
                 <Col md={4}>
                   <div className="contacts-form" data-aos="fade-up">
-                    <form>
+                    <form ref={form} onSubmit={sendEmail}>
                       <div className="input-container d-flex flex-column">
                         <label htmlFor="username" className="label-class">
                           Full Name
@@ -68,8 +83,8 @@ export default function Contactus() {
                           name="name"
                           aria-describedby="emailHelp"
                           placeholder="Enter your name"
-                          value={formData.name || ""}
-                          onChange={handleChange}
+                          value={formDetails.firstName}
+                          onChange={(e) => onFormUpdate('firstName', e.target.value)}
                         />
                       </div>
                       <div className="input-container d-flex flex-column">
@@ -83,8 +98,8 @@ export default function Contactus() {
                           id="email"
                           aria-describedby="emailHelp"
                           placeholder="Enter email"
-                          value={formData.email || ""}
-                          onChange={handleChange}
+                          value={formDetails.email}
+                          onChange={(e) => onFormUpdate('email', e.target.value)}
                         />
                       </div>
                       <div className="input-container d-flex flex-column">
@@ -97,8 +112,8 @@ export default function Contactus() {
                           name="message"
                           rows="3"
                           placeholder="Enter message"
-                          value={formData.message || ""}
-                          onChange={handleChange}
+                          value={formDetails.message}
+                          onChange={(e) => onFormUpdate('message', e.target.value)}
                         />
                       </div>
 
@@ -106,9 +121,8 @@ export default function Contactus() {
                         <button
                           type="submit"
                           className="submitBtn"
-                          onClick={handleSubmit}
                         >
-                          Submit
+                          {buttonText}
                           <AiOutlineSend className="send-icon" />
                         </button>
                       </div>
@@ -118,7 +132,7 @@ export default function Contactus() {
                 <Col md={7}>
                   <div className="contacts-details">
                     <a
-                      href={`mailto:mdtonmoy13.mt@gmail.com`}
+                      href={`mailto:001.ksharif@gmail.com`}
                       className="personal-details"
                     >
                       <div className="detailsIcon">
@@ -129,7 +143,7 @@ export default function Contactus() {
                       </p>
                     </a>
                     <a
-                      href={`tel:+880 1603-550521`}
+                      href={`tel:+91-8291443508`}
                       className="personal-details"
                     >
                       <div className="detailsIcon">

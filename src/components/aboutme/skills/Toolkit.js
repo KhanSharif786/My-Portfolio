@@ -50,18 +50,18 @@ export default function Toolkit() {
               }}
             />
           </Col>
-          <Col xs={4} md={2} className="tech-icons">
+          {/* <Col xs={4} md={2} className="tech-icons">
             <img src={cb} alt="" style={{ width: "95%", height: "95%" }} />
-          </Col>
-          <Col xs={4} md={2} className="tech-icons">
+          </Col> */}
+          {/* <Col xs={4} md={2} className="tech-icons">
             <img src={pg} alt="" style={{ width: "95%", height: "95%" }} />
-          </Col>
+          </Col> */}
           <Col xs={4} md={2} className="tech-icons">
             <img src={pm} alt="" style={{ width: "95%", height: "95%" }} />
           </Col>
-          <Col xs={4} md={2} className="tech-icons">
+          {/* <Col xs={4} md={2} className="tech-icons">
             <img src={chrome} alt="" style={{ width: "95%", height: "95%" }} />
-          </Col>
+          </Col> */}
         </Row>
       </Container>
     </div>

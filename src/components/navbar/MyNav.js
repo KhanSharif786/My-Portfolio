@@ -11,6 +11,7 @@ import {
 import { FaBlog } from "react-icons/fa";
 import "../../style.css";
 import { CgFileDocument } from "react-icons/cg";
+
 export default function MyNav() {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
@@ -35,7 +36,7 @@ export default function MyNav() {
       <Container>
         <Navbar.Brand href="/">
           <div className="d-flex flex-row justify-content-between">
-            <img src="./profile.png" className="img-fluid logo" alt="brand" />
+            <img src="./profile3.png" className="img-fluid logo" alt="brand" />
             <h5
               id="navhead"
               style={{
@@ -90,13 +91,14 @@ export default function MyNav() {
             </Nav.Item>
 
             <Nav.Item>
-              <Nav.Link
-                as={Link}
-                to="/blogs"
+              <a
+                href="./resume.pdf"
+                download="Khan_Mohammad_Sharif_Resume.pdf"
+                className="nav-link"
                 onClick={() => updateExpanded(false)}
               >
-                <FaBlog style={{ marginBottom: "2px" }} /> Blogs
-              </Nav.Link>
+                <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
+              </a>
             </Nav.Item>
 
             <Nav.Item className="fork-btn">
